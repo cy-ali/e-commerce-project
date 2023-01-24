@@ -3,6 +3,7 @@ import category.Electronic;
 import category.Furniture;
 import category.SkinCare;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -38,6 +39,24 @@ public class DataGenerator {
         StaticConstants.CATEGORY_LIST.add(category1);
         StaticConstants.CATEGORY_LIST.add(category2);
         StaticConstants.CATEGORY_LIST.add(category3);
+
+    }
+
+    public static void createProduct(){
+
+        Product product1 =
+                new Product(UUID.randomUUID(),"PS5", BigDecimal.valueOf(230.72),7,7,StaticConstants.CATEGORY_LIST.get(0).getId());
+        Product product2 =
+                new Product(UUID.randomUUID(),"XBOX",BigDecimal.valueOf(120.34),15,15,StaticConstants.CATEGORY_LIST.get(0).getId());
+        Product product3=
+                new Product(UUID.randomUUID(),"Chair",BigDecimal.valueOf(30.87),85,85,StaticConstants.CATEGORY_LIST.get(1).getId());
+        Product product4=
+                new Product(UUID.randomUUID(),"Milk",BigDecimal.valueOf(2.87),185,85,UUID.randomUUID());
+
+        StaticConstants.PRODUCT_LIST.add(product1);
+        StaticConstants.PRODUCT_LIST.add(product2);
+        StaticConstants.PRODUCT_LIST.add(product3);
+        StaticConstants.PRODUCT_LIST.add(product4);
 
     }
 }
